@@ -1,0 +1,379 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(8, 99, 180, 0.611);
+    color: white;
+    padding: 20px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* ===== HEADER ===== */
+#header{
+    width: 100%;
+    height: 100vh;
+    background: url("images/bg-landing.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.header-text h1 span{
+    color: black;
+}
+
+/* Dark Overlay for Better Readability */
+#header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header Text */
+.header-text {
+    position: relative;
+    color: white;
+    font-size: 32px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.header-text h1 span {
+    color: #ffcc00;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 10%;
+    z-index: 100;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* ===== PRODUCT SECTION ===== */
+.products {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    max-width: 180px;
+    border-radius: 8px;
+}
+
+.product h3 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.product p {
+    color: #555;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.product button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.product button:hover {
+    background: #0056b3;
+}
+
+/* ===== REVIEW SECTION ===== */
+.reviews {
+    margin-top: 40px;
+}
+
+.review {
+    background: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== REVIEW FORM ===== */
+.review-form {
+    background: grey;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.review-form button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.review-form button:hover {
+    background: #218838;
+}
+
+/* Contact */
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: rgba(8, 99, 180, 0.611);
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: rgba(0, 0, 0, 0.6);
+    font-weight: 300;
+    margin-top: 200px;
+    margin-bottom: -20px;
+}
+
+.copyright i{
+    color: rgba(8, 99, 180, 0.611);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .header-text h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .header-text {
+        font-size: 24px;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text {
+        font-size: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 32px;
+    }
+
+    .product-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+

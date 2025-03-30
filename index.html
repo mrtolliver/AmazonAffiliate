@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Tech Empire
+      </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bf1f97d80d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1>Tech Empire</h1></a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="apple.html">Apple Products</a></li>
+                    <li><a href="clothing.html">Clothing Products</a></li>
+                    <li><a href="outdoor.html">Outdoor Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+            </nav>
+            <div class="header-text">
+                <h1>Tech Empire</h1>
+                <p>Stay ahead with the latest tech trends, in depth <br> gadget reviews, and expert buying guides.</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="products">
+            <h2>Featured Products</h2>
+            <div class="product-list">
+                <div class='product'>
+                    <img src="images/rangefinder.jpg">
+                    <h3><a href="https://amzn.to/4iSR8Z2" target="_blank" rel="nofollow noopener">REVASRI Golf Rangefinder</a></h3>
+                    <p><a>Improve your golf game with the REVASRI Golf Rangefinder. Featuring slope adjustment and pin lock vibration, it delivers fast, accurate distance readings. Shop now on Amazon.</a></p>
+                    <p><a href="rangefinder.html">Read more</a><p>
+                </div>
+                <div class='product'>
+                    <img src="images/pickleball.jpg">
+                    <h3><a href="https://amzn.to/41R1Jg6" target="_blank" rel="nofollow noopener">Pickleball Paddles, USAPA Approved Fiberglass Surface Pickleball Set with Pickleball Rackets, Pickleball Paddles Set ​for Men Women</a></h3>
+                    <p><a>Get the complete Pickleball Paddle Set with 2 paddles, 4 balls, and a carrying case. USAPA-approved, durable, and beginner-friendly. Shop now and start playing!</a></p>
+                    <p><a href="pickleball.html">Read more</a><p>
+                </div>
+                <div class='product'>
+                    <img src="images/smartplug.jpg">
+                    <h3><a href="https://amzn.to/4bQZJcn" target="_blank" rel="nofollow noopener">Amazon Smart Plug | Works with Alexa | Simple setup, endless possibilities</a></h3>
+                    <p><a>Control lights, appliances, and more with the Amazon Smart Plug. Easy setup, Alexa integration, and voice control make it the perfect entry into smart home living. Shop now on Amazon.</a></p>
+                    <p><a href="smartplug.html">Read more</a><p>
+                </div>
+                <div class='product'>
+                    <img src="images/spicerack.jpg">
+                    <h3><a href="https://amzn.to/4hE2Oh7" target="_blank" rel="nofollow noopener">4 Pack Magnetic Spice Storage Rack Organizer for Refrigerator and Oven, Black Fridge Organizers and Storage</a></h3>
+                    <p><a>Maximize kitchen space with this 4-Pack Magnetic Spice Rack Organizer. Strong magnets, sleek design, and no tools required—perfect for fridge, oven, or metal surfaces. Shop now on Amazon.</a></p>
+                    <p><a href="spicerack.html">Read more</a><p>
+                </div>
+                <div class='product'>
+                    <img src="images/charging.jpg">
+                    <h3><a href="https://amzn.to/41NUMMR" target="_blank" rel="nofollow noopener">Wireless Charging Station, 3 in 1 Fast Wireless Charger Stand for Multiple Devices Apple Watch Ultra Series 10 9 8 7 6 SE 5 4 3 2, iPhone 16 15 14 13 12 11 Pro Max/Plus/Mini/X/XS/
+                    Max/XR/SE, Airpods</a></h3>
+                    <p><a>Charge your iPhone, Apple Watch & AirPods simultaneously with this 3-in-1 wireless charger. Fast, sleek, and perfect for travel or desk setup. Shop now on Amazon.</a></p>
+                    <p><a href="charging.html">Read more</a><p>
+                </div>
+                <div class='product'>
+                    <img src="images/taylormadeballs.jpg">
+                    <h3><a href="https://amzn.to/4iVmYEt" target="_blank" rel="nofollow noopener">TaylorMade Golf Distance+ Golf Balls</a></h3>
+                    <p><a>Add more yards to your drive with TaylorMade Distance+ Golf Balls. Featuring a React Speed Core and aerodynamic design, these balls deliver long distance and soft feel. Shop now on Amazon.</a></p>
+                    <p><a href="taylormadeballs.html">Read more</a><p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="copyright">
+        <p>Copyright © Tech Empire <i class="fa-solid fa-heart"></i></p>
+    </div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyj4qH2ZBrvj8a0cqroIQs5XruxZ9hgPvutz6-MY6i0Kbxzg49kFV4lZgn0le009l9r/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+<script src="js/bootstrap.min.js"> </script>
+<script src="js/bootstrap.js"> </script>
+</html>
+

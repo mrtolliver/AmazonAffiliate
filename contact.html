@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Tech Empire - Contact
+      </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bf1f97d80d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Contact</h1>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="apple.html">Apple Products</a></li>
+            <li><a href="clothing.html">Clothing Products</a></li>
+            <li><a href="outdoor.html">Outdoor Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+</div>
+
+    <main>
+        <section class="review-form">
+            <h2>Contact Us</h2>
+            <form name="submit-to-google-sheet">
+                <label for="name">Your Name:</label>
+                <input type="text" name="Name" placeholder="Name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" name="Email" placeholder="Email" required>
+                <label for="review">Your Message:</label>
+                <textarea name="Message" rows="6" placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <span id="msg"></span>
+        </section>
+    </main>
+    <main>
+        <section class="review-form">
+            <h2>Privacy Policy & Terms and Conditions</h2>
+            <label><a href="privacy.html" class="btn btn2">Privacy Policy</a></label>
+            <label><a href="terms.html" class="btn btn2">Terms & Conditions</a></label>
+            <label><a href="disclosure.html" class="btn btn2">Affiliate Disclosure</a></label>
+        </section>
+    </main>
+
+
+    <div class="copyright">
+        <p>Copyright © Tech Empire <i class="fa-solid fa-heart"></i></p>
+    </div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyj4qH2ZBrvj8a0cqroIQs5XruxZ9hgPvutz6-MY6i0Kbxzg49kFV4lZgn0le009l9r/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
